@@ -1,5 +1,5 @@
 # form-editable-table
 
-Oracle JET component that takes a table and allows for editing of the cells in any row. Allows for 
-filtering on the table.
+Oracle JET component. Consists of a filterable table, where any row can be selected so its cells can be 
+individually edited.
 
