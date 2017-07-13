@@ -1,0 +1,28 @@
+<div class="form-editable-table">
+    <input type="text" data-bind="textInput: filterBy" placeholder="Filter" />
+    </br></br>
+    <table>
+    <thead>
+        <tr data-bind="foreach: header"><td class="form-editable-table-header" data-bind="text: $data"></td></tr>
+    </thead>
+    <tbody>
+        <!-- ko foreach: cellData -->
+            <tr data-bind="foreach: cells, visible: visibility, click: $parent.selectRow($index)">
+                <td data-bind="text: $data" class="form-editable-table-cell"></td>
+            </tr>
+        <!-- /ko -->
+            <tr data-bind="visible: noCells"><td data-bind="attr: {colspan: header.length}" class="form-editable-table-error">No cells to show</td></tr>
+    </tbody>
+    </table>
+</div>
+</br>
+
+<!--    Create a text input for every single cell of the data
+        but keep them all invisible except for currently selected row  -->
+<div data-bind="foreach: cellData">
+    <div data-bind="foreach: cells, visible: $parents[0].currentRow() == $index()">
+        <span data-bind="text: $parents[1].header[$index()] + ': '"></span>
+        <input type="text" data-bind="value: $rawData"></input>
+        </br>
+    </div>
+</div>
