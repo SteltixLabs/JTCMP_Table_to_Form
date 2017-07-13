@@ -1,0 +1,16 @@
+{
+    "name": "form-editable-table",
+    "description": "Filterable table component",
+    "version": "1.0.0",
+    "properties":  {
+        "rows": {
+            "type": "object"
+        },
+        "filter": {
+            "type": "string"
+        },
+        "header": {
+            "type": "string"
+        }
+    }
+}

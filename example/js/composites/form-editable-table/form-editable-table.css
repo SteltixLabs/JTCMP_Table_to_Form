@@ -1,0 +1,20 @@
+table, tr, td {
+    border: 1px solid #d6dfe6;
+}
+
+.form-editable-table td {
+    padding: 5px;
+    color: #333;
+}
+
+.form-editable-table-cell {
+    background-color: white;
+}
+
+.form-editable-table-header {
+    background-color: #f1f3f8;
+}
+
+.form-editable-table-error {
+    background-color: tomato;
+}
